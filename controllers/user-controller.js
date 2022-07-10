@@ -78,7 +78,7 @@ const userController = {
     {
         User.findByIdAndUpdate(
             { _id: params.id },
-            { $pull: { friends: params.friendsId } },
+            { $push: { friends: params.friendsId } },
             { new: true }
         )
             .then(dbUserData => res.json(dbUserData))

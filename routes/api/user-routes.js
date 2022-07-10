@@ -6,6 +6,6 @@ router.route('/').get(getAllUsers).post(createUser)
 
 router.route('/:id').get(getUserById).put(updateUser).delete(deleteUser)
 
-rpoputer.route('/:id/friends/:friendsId').post(addFriend).delete(removeFriend)
+router.route('/:id/friends/:friendsId').put(addFriend).delete(removeFriend)
 
 module.exports = router
