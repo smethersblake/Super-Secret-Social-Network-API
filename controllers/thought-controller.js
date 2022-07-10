@@ -56,7 +56,7 @@ const thoughtController = {
             })
             .catch(err => res.json(err))
     },
-    updateThought ({ params, body }, res) 
+    updateThoughtById ({ params, body }, res) 
     {
         Thought.findOneAndUpdate({ _id: params.id }, body, { new: true })
             .then(dbThoughtData => 
